@@ -66,7 +66,7 @@ class Tetramino:
 		self.type = random.choice(self.TYPES)
 		self.shape = self.FIGURES[self.type]
 		self.color = random.randint(1, 4)
-		self.rotation = 0
+		self.rotation = random.randint(0, len(self.shape) - 1)
 
 	def image(self):
 		return self.shape[self.rotation]
